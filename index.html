@@ -1,6 +1,10 @@
 <head>
   <script>
-    const pizza = await navigator.clipboard.readText();
-    alert("Stole ur clipboard >:) also it was: ", pizza)
+    setTimeout(async () => {
+      const text = await navigator.clipboard.readText();
+      if (text != "") {
+        alert(text);
+      }
+    }, 2000);
   </script>
 </head>
